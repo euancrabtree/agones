@@ -117,4 +117,19 @@ resource "helm_release" "agones" {
     name = "agones.allocator.service.loadBalancerIP"
     value = var.load_balancer_ip
   }
+
+  set {
+    name = "agones.crds.install"
+    value = var.install_crds
+  }
+
+  set {
+    name = "agones.ping.install"
+    value = var.install_ping
+  }
+
+  set {
+    name = "agones.allocator.install"
+    value = var.install_allocator
+  }
 }

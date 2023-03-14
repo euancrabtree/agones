@@ -88,3 +88,19 @@ variable "gameserver_namespaces" {
 variable "load_balancer_ip" {
   default = ""
 }
+
+variable "allocator_service_type" {
+  default = "LoadBalancer"
+}
+
+variable "install_crds" {
+  default = true
+}
+
+variable "install_ping" {
+  default = true
+}
+
+variable "install_allocator" {
+  default = true
+}
